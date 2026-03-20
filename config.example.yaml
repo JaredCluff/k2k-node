@@ -1,0 +1,37 @@
+# K2K Node Configuration
+# Copy to config.yaml and customize
+
+# Node identity
+node_name: "My K2K Node"
+# node_id: null  # Auto-generated on first start
+
+# Server
+host: "127.0.0.1"
+port: 19850
+
+# Data directory (SQLite, keys, models)
+data_dir: "~/.local/share/k2k-node"
+
+# Paths to index on startup
+index_paths:
+  # - "/Users/me/Documents"
+  # - "/Users/me/Notes"
+
+# Security
+# registration_secret: "my-secret-key"  # Auto-approves clients with this secret
+allowed_clients: []  # Empty = allow all approved clients
+auto_approve: false  # Set true for development
+
+# Discovery
+mdns_enabled: true
+trusted_node_ids: []  # Empty = ignore all mDNS peers (closed by default)
+bootstrap_nodes: []
+
+# Embedding model
+embedding_model: "all-MiniLM-L6-v2"
+
+# Rate limiting
+rate_limit_per_minute: 60
+
+# Task concurrency
+max_task_workers: 4
